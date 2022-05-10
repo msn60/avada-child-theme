@@ -1,11 +1,11 @@
-# Woodmart child theme for sartas.co site
+# Avada child theme 
 
 * Contributors: [Mehdi Soltani](https://github.com/msn60)
 
 
 
 ## Description
-It's a child theme for woodmart and it is used in sartas.co
+It's a child theme for Avada and it is used in many sites.
 
 
 ## FAQs
