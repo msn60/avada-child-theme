@@ -1,0 +1,106 @@
+
+/*Styles for child theme*/
+#input_5_1, #input_5_9, #input_5_8 {
+  width: 100% !important;
+  height: 36px !important;
+}
+
+
+/*.uap-ap-theme-2 .uap-ap-menu .uap-ap-menu-tab-item, .uap-ap-theme-2 .uap-ap-menu ul .uap-public-ap-menu-subtabs .uap-ap-menu-item, .uap-register-form *, .uap-ap-warnings,
+.uap-ap-theme-2 .uap-user-page-content {
+  font-family: irsans, Arial, Helvetica, sans-serif !important;
+}
+
+.uap-user-page-wrapper .uap-register-3 {
+  width: 100% !important;
+}
+
+.uap-register-3 .uap-labels-register, .uap-register-3 .uap-form-line-register input[type="text"], .uap-register-3 .uap-form-line-register input[type="password"], .uap-register-3 .uap-form-line-register input[type="number"], .uap-register-3 .uap-form-line-register textarea, .uap-register-3 .uap-form-line-register select, .uap-register-3 .uap-form-line-register .select2-selection,
+.uap-register-1 .uap-form-line-register input[type="text"], .uap-register-1 .uap-form-line-register input[type="password"], .uap-register-1 .uap-form-line-register input[type="number"], .uap-register-1 .uap-form-line-register textarea, .uap-register-1 .uap-form-line-register select {
+  text-align: right !important;
+}
+
+#uap_user_email_field {
+  text-align: left !important;
+}
+
+#comment-input input, #comment-textarea textarea, #tribe-bar-form input[type="text"], .avada-select .select2-container .select2-choice, .avada-select .select2-container .select2-choice2, .avada-select-parent select, .chzn-container .chzn-drop, .chzn-container-single .chzn-single, .comment-form-comment textarea, .gform_wrapper .gfield input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]), .gform_wrapper .gfield select, .gform_wrapper .gfield textarea, .gform_wrapper .gfield_select[multiple="multiple"], .input-text, .main-nav-search-form input, .post-password-form label input[type="password"], .search-page-search-form input, .searchform .fusion-search-form-content .fusion-search-field input, .select2-container--default .select2-selection--single, .select2-dropdown, .tribe-bar-disabled #tribe-bar-form .tribe-bar-filters input[type="text"], .wpcf7-captchar, .wpcf7-form .wpcf7-date, .wpcf7-form .wpcf7-number, .wpcf7-form .wpcf7-quiz, .wpcf7-form .wpcf7-select, .wpcf7-form .wpcf7-text, .wpcf7-form textarea, input.s, input[type="email"], input[type="number"], input[type="password"], input[type="text"], select, textarea {
+  background-color: #fff !important;
+}
+
+.uap-register-form, .uap_phone_field, .uap-register-3 .uap-labels-register, .uap-register-3 .uap-form-line-register input[type="text"], .uap-register-3 .uap-form-line-register input[type="password"], .uap-register-3 .uap-form-line-register input[type="number"], .uap-register-3 .uap-form-line-register textarea, .uap-register-3 .uap-form-line-register select, .uap-register-3 .uap-form-line-register .select2-selection, .uap-register-1 .uap-form-line-register input[type="text"], .uap-register-1 .uap-form-line-register input[type="password"], .uap-register-1 .uap-form-line-register input[type="number"], .uap-register-1 .uap-form-line-register textarea, .uap-register-1 .uap-form-line-register select {
+  width: 100% !important;
+}
+
+#calc_shipping_state_field .select2-selection__placeholder, #comment-input .placeholder, #comment-input input, #comment-textarea .placeholder, #comment-textarea textarea, #tribe-bar-form input[type=text], .avada-select .select2-container .select2-choice, .avada-select .select2-container .select2-choice2, .avada-select-parent select, .chzn-container .chzn-drop, .chzn-container-single .chzn-single, .comment-form-comment textarea, .fusion-search-form-clean .searchform .fusion-search-form-content .fusion-search-button input[type="submit"], .gform_wrapper .gfield input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]), .gform_wrapper .gfield select, .gform_wrapper .gfield textarea, .gform_wrapper .gfield_select[multiple=multiple], .input-text, .main-nav-search-form input, .post-password-form label input[type="password"], .search-page-search-form input, .searchform .fusion-search-form-content .fusion-search-field input, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2-results__option, .tribe-bar-disabled #tribe-bar-form .tribe-bar-filters input[type=text], .wpcf7-captchar, .wpcf7-form .wpcf7-date, .wpcf7-form .wpcf7-number, .wpcf7-form .wpcf7-quiz, .wpcf7-form .wpcf7-select, .wpcf7-form .wpcf7-text, .wpcf7-form textarea, .wpcf7-select-parent .select-arrow, input.s, input.s .placeholder, input[type="email"], input[type="number"], input[type="password"], input[type="text"], select, textarea {
+  color: #000000 !important;
+}
+
+.btn-register {
+  width: 80px !important;
+  margin-top: 5px;
+}
+
+::placeholder {
+  color: rgba(88, 86, 94, 0.71) !important;
+  opacity: 1; !* Firefox *!
+}
+
+:-ms-input-placeholder { !* Internet Explorer 10-11 *!
+  color: rgba(88, 86, 94, 0.71) !important;
+}
+
+::-ms-input-placeholder { !* Microsoft Edge *!
+  color: rgba(88, 86, 94, 0.71) !important;
+}
+
+.fusion-megamenu-icon {
+  margin-right: 10px !important;
+}
+
+#menu-item-1204 {
+  display: none !important;
+}
+
+.uap-register-1 .uap-submit-form input {
+  color: #fff !important;
+  cursor: pointer !important;
+}
+
+.uap-become-affiliate-bttn {
+  cursor: pointer !important;
+}
+
+#uap_submit_bttn {
+
+  min-height: 44px;
+
+}
+
+.fusion-mobile-menu-design-modern .fusion-mobile-menu-text-align-right .fusion-mobile-nav-item a {
+  padding-right: 50px !important;
+}
+
+.fusion-mobile-menu-icons a {
+  padding-right: 5px !important;
+}
+
+button {
+  font-family: irsans, Arial, Helvetica, sans-serif !important;
+}
+
+.post-content p {
+  text-align: justify;
+}*/
+
+/* My Account */
+/*.woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide,
+.woocommerce-form-row.woocommerce-form-row--last.form-row.form-row-last,
+.woocommerce-form-row.woocommerce-form-row--first.form-row.form-row-first{
+  text-align: right;
+}*/
+
+/* Reg woocommerce Form */
+/*.form-row.form-row-last, .form-row.form-row-wide {
+  text-align: right;
+}*/
