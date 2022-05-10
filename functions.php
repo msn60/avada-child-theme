@@ -6,7 +6,7 @@
  * that you want to use it in your WordPress theme, are inside in this file.
  *
  * @package    Msn_Avada_Child
- * @version    1.1.1
+ * @version    1.1.2
  * @author     Mehdi Soltani <soltani.n.mehdi@gmail.com>
  * @link       https://github.com/msn60
  */
@@ -44,6 +44,14 @@ final class Main_Avada_Child_Theme {
 	 */
 	protected $theme_version;
 
+	public static function instance() {
+		if ( is_null( ( self::$instance ) ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+	}
+
 	private function __construct() {
 		$autoloader_path = 'inc/class-autoloader.php';
 		require_once trailingslashit( get_theme_file_path() ) . $autoloader_path;
@@ -52,23 +60,49 @@ final class Main_Avada_Child_Theme {
 		if ( defined( 'MSN_CHILD_VERSION' ) ) {
 			$this->theme_version = MSN_CHILD_VERSION;
 		} else {
-			$this->theme_version = '1.1.1';
+			$this->theme_version = '1.1.2';
 		}
 
 	}
 
 	public function init_theme() {
 		$this->register_general_add_action();
+		$this->register_general_add_filter();
 	}
 
+	/**
+	 * Register actions in child theme
+	 */
 	public function register_general_add_action() {
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_css_files' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_js_files' ) );
-		add_action( 'after_setup_theme', array( $this, 'setup_language_file' ) );
+
+		/**
+		 * Enqueue custom css file
+		 */
+		//add_action( 'wp_enqueue_scripts', array( $this, 'register_css_files' ) );
+		/**
+		 * Enqueue custom js file
+		 */
+		//add_action( 'wp_enqueue_scripts', array( $this, 'register_js_files' ) );
+		/**
+		 *
+		 */
+		//add_action( 'after_setup_theme', array( $this, 'setup_language_file' ) );
 	}
 
+	/**
+	 * Register filters in child theme
+	 */
 	public function register_general_add_filter() {
-		add_filter( 'woocommerce_checkout_fields', 'override_checkout_fields' );
+		/**
+		 * Remove query string from URL
+		 */
+		add_filter( 'script_loader_src', array($this, 'remove_script_version'), 15, 1 );
+		add_filter( 'style_loader_src', array($this, 'remove_script_version'), 15, 1 );
+		/**
+		 * Convert to persian digits in widgets in Avada footer
+		 */
+		//add_filter('widget_text', array($this, 'convert_to_persian_digits'));
+
 	}
 
 	public function setup_language_file() {
@@ -91,29 +125,17 @@ final class Main_Avada_Child_Theme {
 		wp_enqueue_script( 'msn-custom-child-js' );
 	}
 
-	public function override_checkout_fields( $fields ) {
-		//unset($fields['billing']['billing_state']);
-		unset( $fields['billing']['billing_country'] );
-		unset( $fields['billing']['billing_company'] );
-		//unset($fields['billing']['billing_address_1']);
-		unset( $fields['billing']['billing_address_2'] );
-		unset( $fields['billing']['billing_postcode'] );
-		unset( $fields['billing']['billing_city'] );
-		//unset($fields['shipping']['shipping_state']);
-		unset( $fields['shipping']['shipping_country'] );
-		unset( $fields['shipping']['shipping_company'] );
-		//unset($fields['shipping']['shipping_address_1']);
-		unset( $fields['shipping']['shipping_address_2'] );
-		unset( $fields['shipping']['shipping_postcode'] );
-		unset( $fields['shipping']['shipping_city'] );
-		return $fields;
+	public function remove_script_version( $src ) {
+		$parts = explode( '?ver', $src );
+		return $parts[0];
 	}
 
-	public static function instance() {
-		if ( is_null( ( self::$instance ) ) ) {
-			self::$instance = new self();
-		}
-		return self::$instance;
+	function convert_to_persian_digits($content) {
+
+		$eng = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9');
+		$per = array('۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹');
+		return str_replace($eng, $per, $content);
+
 	}
 
 }

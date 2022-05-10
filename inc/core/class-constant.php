@@ -125,7 +125,7 @@ class Constant {
 		 * It is used to specify theme version for development purpose.
 		 */
 		if ( ! defined( 'MSN_CHILD_VERSION' ) ) {
-			define( 'MSN_CHILD_VERSION', '1.1.1' );
+			define( 'MSN_CHILD_VERSION', '1.1.2' );
 		}
 
 		/**
